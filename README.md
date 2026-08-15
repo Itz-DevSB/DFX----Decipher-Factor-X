@@ -1,36 +1,77 @@
 # DFX — Decipher Factor X
 
-**DFX** is an advanced multi-method cipher decoder designed to analyze ciphertext using hundreds of classical and custom cipher techniques, rank the results by English likelihood, and export deciphering attempts for further analysis.
+> **A multi-method classical cipher and encoding analysis tool that searches, scores, and ranks possible deciphering results.**
 
-## What DFX does
+DFX (**Decipher Factor X**) is an experimental cryptanalysis project built for situations where the cipher or encoding method is unknown. Instead of requiring you to identify a single cipher first, DFX can test many candidate transformations, evaluate the resulting text, and rank the most promising outputs.
 
-- Tests a large collection of cipher and decoding methods
-- Ranks candidate plaintexts by English-language likelihood
-- Keeps multiple decoding attempts instead of returning only one guess
-- Helps identify which cipher method is most likely to have produced a message
-- Supports experimentation with classical and custom cipher systems
-- Can export decoding results for later analysis
+## ✨ Features
 
-## Why DFX?
+- 🔎 Multi-method cipher and encoding analysis
+- 🧠 English-likelihood scoring and ranked results
+- 🔐 Classical cipher experimentation
+- 🧪 Support for custom decoding methods
+- 📊 Multiple candidate results instead of a single guess
+- 💾 Exportable deciphering results for later analysis
+- ⚙️ Designed to be extended with additional methods
 
-Traditional cipher tools usually focus on one known cipher at a time. DFX takes a broader approach: **try many possible methods, score the results, and let the strongest candidates rise to the top.**
+## 🎯 What problem does DFX solve?
 
-DFX is intended as an experimental cryptanalysis and cipher-analysis project, especially for testing unknown or unfamiliar ciphertext.
+When you receive ciphertext but don't know how it was produced, the first problem is identifying the transformation. DFX approaches this as a search problem:
 
-## Project name
+```text
+Ciphertext
+    ↓
+Try many candidate methods
+    ↓
+Generate possible plaintexts
+    ↓
+Score the results
+    ↓
+Rank the strongest candidates
+```
 
-**DFX — Decipher Factor X**
+The highest-ranked result is a **candidate**, not a guarantee. Short, unusual, or heavily transformed messages may produce misleading scores.
 
-The "X" represents the unknown factor: the cipher method, transformation, or combination of techniques needed to turn ciphertext back into meaningful text.
+## 🧩 Supported approach
 
-## Status
+DFX is primarily aimed at classical and educational cipher analysis, including experiments with transformations such as substitution, transposition, shifts, reversals, and other encoding/decoding techniques.
 
-DFX is an actively developed project. New decoding methods, scoring improvements, and analysis features may be added over time.
+The project is intended to grow as new deciphering methods and scoring techniques are added.
 
-## Disclaimer
+## 🚀 Getting started
 
-DFX is an educational and experimental cipher-analysis tool. Results are ranked guesses, not guaranteed correct decryptions. For strong modern encryption, brute-force-style classical cipher analysis is generally not applicable.
+Clone the repository:
 
-## License
+```bash
+git clone https://github.com/Itz-DevSB/DFX----Decipher-Factor-X.git
+cd DFX----Decipher-Factor-X
+```
 
-See the [LICENSE](LICENSE) file for licensing information.
+Run the project using the entry-point instructions provided with the current release/source code.
+
+## 📁 Results
+
+DFX can be used to preserve deciphering attempts so that different methods and scores can be compared instead of losing potentially useful candidates.
+
+Generated local output files should not be committed to the repository unless they are intentionally part of the project.
+
+## ⚠️ Limitations
+
+DFX is an educational and experimental analysis tool. It is not a universal decryption system.
+
+Modern cryptographic systems such as AES and properly implemented public-key cryptography are specifically designed to resist this kind of classical-cipher search. DFX should therefore not be treated as a tool for breaking modern encryption.
+
+## 📌 Project status
+
+**Active development.**
+
+The method library, scoring system, performance, and user interface may change as DFX evolves.
+
+## 📜 License
+
+DFX is released under the **MIT License**. See [`LICENSE`](LICENSE) for the full license text.
+
+---
+
+**DFX — Decipher Factor X**  
+*Find the unknown factor.*
